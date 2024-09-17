@@ -3,11 +3,17 @@
     background-color: transparent;
     color: blue;
     border: solid 1px gray;
-    min-width: 25px;
+    min-width: 24px;
     width: fit-content;
-    height: 25px ;
+    height: 24px ;
   }
+
+  button:disabled {
+    color: lightblue
+  }
+
   .active {
     background-color: lightskyblue;
   }
+
 }

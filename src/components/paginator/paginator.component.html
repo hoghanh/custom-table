@@ -1,5 +1,17 @@
 <div class="pagination">
-  <button *ngFor="let page of pages" (click)="onPageChange(page)" [class.active]="page === activePage">
+  <button (click)="previousPage()" [disabled]="activePage === 1">
+    Previous
+  </button>
+
+  <button
+    *ngFor="let page of pages"
+    (click)="onPageChange(page)"
+    [class.active]="page === activePage"
+  >
     {{ page }}
+  </button>
+
+  <button (click)="nextPage()" [disabled]="activePage === totalPages">
+    Next
   </button>
 </div>

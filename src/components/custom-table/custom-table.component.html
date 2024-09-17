@@ -1,5 +1,13 @@
-<app-table [columns]="columns" [data]="dataPerPage"></app-table>
-<app-paginator
-  [totalPages]="totalPages"
-  (pageChange)="handlePageChange($event)"
-></app-paginator>
+<div class="custom-table">
+  <app-table [columns]="columns" [data]="dataPerPage"></app-table>
+
+  <div class="table-footer">
+    <p>
+      Showing {{ firstItem + 1 }} to {{ lastItem }} of {{ data.length }} items
+    </p>
+    <app-paginator
+      [totalPages]="totalPages"
+      (pageChange)="handlePageChange($event)"
+    ></app-paginator>
+  </div>
+</div>
