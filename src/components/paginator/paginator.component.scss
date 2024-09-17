@@ -1,0 +1,13 @@
+.pagination {
+  button {
+    background-color: transparent;
+    color: blue;
+    border: solid 1px gray;
+    min-width: 25px;
+    width: fit-content;
+    height: 25px ;
+  }
+  .active {
+    background-color: lightskyblue;
+  }
+}

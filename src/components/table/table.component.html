@@ -1,0 +1,29 @@
+<table class="table full-width">
+  <thead>
+    <tr>
+      <th
+        *ngFor="let column of columns"
+        (click)="onHeaderClick(column.field)"
+        [ngStyle]="{ width: 100 / columns.length + '%' }"
+      >
+        {{ column.header }}
+        <span *ngIf="sortColumn === column.field">
+          {{
+            sortDirection === "asc" ? "▲" : sortDirection === "desc" ? "▼" : ""
+          }}
+        </span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let row of data"
+      (click)="onRowClick(row)"
+      [ngStyle]="{ width: 100 / columns.length + '%' }"
+    >
+      <td *ngFor="let column of columns">
+        {{ row[column.field] }}
+      </td>
+    </tr>
+  </tbody>
+</table>

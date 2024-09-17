@@ -1,0 +1,5 @@
+<app-table [columns]="columns" [data]="dataPerPage"></app-table>
+<app-paginator
+  [totalPages]="totalPages"
+  (pageChange)="handlePageChange($event)"
+></app-paginator>
